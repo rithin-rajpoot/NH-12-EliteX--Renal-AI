@@ -1,0 +1,252 @@
+# =============================================================================
+# RenalAI - Kidney Stone Detector .gitignore
+# =============================================================================
+
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+# -----------------------------------------------------------------------------
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# IDEs and Editors
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb
+
+# Model Files (Large Files)
+# -----------------------------------------------------------------------------
+# Exclude trained model files (too large for GitHub)
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.tflite
+models/*.h5
+models/*.pb
+models/*.weights
+
+# Keep only the base YOLOv8 model and trained models used in app
+!models/yolov8n.pt
+!models/kidney_stone_transfer_20250920_192030/weights/epoch10.pt
+!models/README.md
+
+# Training Data and Datasets
+# -----------------------------------------------------------------------------
+# Exclude large dataset files
+data/dataset/train/
+data/dataset/valid/
+data/dataset/test/
+data/raw/
+data/processed/
+data/*.zip
+data/*.tar.gz
+data/*.rar
+
+# Keep sample images and configuration
+!data/sample_images/
+!data/dataset/data.yaml
+!data/README.md
+
+# Output Files
+# -----------------------------------------------------------------------------
+# Generated reports and outputs
+outputs/reports/*.pdf
+outputs/predictions/
+outputs/logs/
+outputs/temp/
+outputs/*.png
+outputs/*.jpg
+outputs/*.jpeg
+
+# Keep directory structure
+!outputs/reports/.gitkeep
+!outputs/.gitkeep
+
+# Training Artifacts
+# -----------------------------------------------------------------------------
+# YOLOv8 training outputs
+runs/
+wandb/
+mlruns/
+models/*/weights/
+models/*/results.csv
+models/*/confusion_matrix*.png
+models/*/*.png
+models/*/*.jpg
+models/*/train_batch*.jpg
+models/*/val_batch*.jpg
+
+# Keep training configuration files
+!models/*/args.yaml
+!models/*/README.md
+
+# Temporary and Cache Files
+# -----------------------------------------------------------------------------
+*.tmp
+*.temp
+*.log
+*.cache
+.cache/
+temp/
+tmp/
+
+# System Files
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Environment and Configuration
+# -----------------------------------------------------------------------------
+# Sensitive configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config_local.ini
+secrets.ini
+
+# Keep example configuration
+!config.ini.example
+
+# Streamlit
+# -----------------------------------------------------------------------------
+.streamlit/
+*.pyc
+
+# Testing
+# -----------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Documentation
+# -----------------------------------------------------------------------------
+docs/_build/
+site/
+
+# Package Files
+# -----------------------------------------------------------------------------
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Medical Data (IMPORTANT: Never commit patient data)
+# -----------------------------------------------------------------------------
+# Patient images and data
+**/patient_data/
+**/medical_images/
+**/dicom_files/
+**/protected_health_info/
+*.dcm
+*.dicom
+
+# Backup Files
+# -----------------------------------------------------------------------------
+*.bak
+*.backup
+*.old
+*~
+
+# Large Files (GitHub has 100MB limit)
+# -----------------------------------------------------------------------------
+# Use Git LFS for files larger than 50MB
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.large
+
+# Custom Exclusions
+# -----------------------------------------------------------------------------
+# Add project-specific exclusions here
+debug/
+scratch/
+experimental/
+archive/
+old_versions/
+
+# Deployment
+# -----------------------------------------------------------------------------
+Dockerfile.local
+docker-compose.override.yml
+.dockerignore
+k8s/secrets/
+
+# =============================================================================
+# Keep Important Files (Whitelist)
+# =============================================================================
+# Ensure these files are always included
+!requirements.txt
+!README.md
+!LICENSE
+!start.bat
+!setup.py
+!pyproject.toml
+!.github/
+!docs/
+!tests/
+!scripts/
+
+# =============================================================================
+# Notes for Developers
+# =============================================================================
+# 1. Model files are excluded due to size - use Git LFS or external storage
+# 2. Patient data must never be committed for privacy/HIPAA compliance
+# 3. Training datasets should be stored separately and documented
+# 4. Use environment variables for sensitive configuration
+# 5. Consider using DVC (Data Version Control) for large datasets
+# =============================================================================

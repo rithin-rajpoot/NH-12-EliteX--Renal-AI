@@ -1,0 +1,13 @@
+train: e:/kidney_stone_detector/data/dataset/train/images
+val: e:/kidney_stone_detector/data/dataset/valid/images
+test: e:/kidney_stone_detector/data/dataset/test/images
+
+nc: 1
+names: ['stone']
+
+roboflow:
+  workspace: tez-nwkf5
+  project: tez_roi_aug
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/tez-nwkf5/tez_roi_aug/dataset/3
