@@ -228,10 +228,16 @@ include_timestamp = true
 ```
 
 ### Confidence Threshold Guidelines
+
+> **🎯 RECOMMENDED: Use confidence between 0.25-0.35 for optimal kidney stone detection accuracy!**
+
+- **25-35%**: **⭐ OPTIMAL RANGE** - Best balance for kidney stone detection
 - **90-95%**: Very conservative (fewer false positives)
-- **70-89%**: Balanced (recommended for most cases)
+- **70-89%**: Balanced (general use cases)
 - **50-69%**: Sensitive (catches smaller stones)
-- **10-49%**: Very sensitive (may include artifacts)
+- **10-15%**: Very sensitive (may include artifacts)
+
+💡 **Pro Tip**: Start with 0.30 confidence for most medical images
 
 ---
 
