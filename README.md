@@ -65,43 +65,58 @@
 
 ---
 
-## 🚀 Quick Start
+## � Clone & Run (Recommended)
+
+The repository includes a **pre-trained kidney stone detection model** ready for immediate use!
+
+```bash
+git clone https://github.com/rithin-rajpoot/renal-ai.git
+cd renal-ai
+```
+
+### ✅ What You Get
+- **Pre-trained Model**: `epoch10.pt` - Specialized kidney stone detection
+- **Complete Application**: Web interface, preprocessing, reporting
+- **Sample Data**: Test images and configuration files
+- **One-Click Launch**: `start.bat` for Windows users
+
+*Zero training required - clone and detect stones immediately!*
+
+---
+
+## �🚀 Quick Start
 
 ### Prerequisites
 - **Python 3.8+** installed on your system
-- **Windows, macOS, or Linux** operating system
 - **Web browser** (Chrome, Firefox, Safari, Edge)
 
-### Option 1: One-Click Launch (Windows)
+### Launch Options
+
+#### Option 1: Windows One-Click 🖱️
 ```bash
-# Simply double-click the start.bat file
+# After cloning, simply double-click
 start.bat
 ```
 
-### Option 2: Manual Installation
+#### Option 2: Cross-Platform 🌐
 ```bash
-# Clone or download the repository
-cd kidney_stone_detector
-
-# Install dependencies
+# Install dependencies and run
 pip install -r requirements.txt
-
-# Launch the application
 streamlit run streamlit_app/app.py
 ```
 
-### Option 3: Python Environment
+#### Option 3: Virtual Environment (Recommended) 📦
 ```bash
-# Create virtual environment (recommended)
+# Create isolated environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # macOS/Linux
 
-# Install dependencies
 pip install -r requirements.txt
-
-# Run application
-python -m streamlit run streamlit_app/app.py
+streamlit run streamlit_app/app.py
 ```
+
+🌐 **Access**: Open `http://localhost:8501` in your browser
 
 ---
 
