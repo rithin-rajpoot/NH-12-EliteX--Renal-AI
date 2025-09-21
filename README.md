@@ -9,6 +9,25 @@
 
 *Advanced Medical Imaging Solution for Kidney Stone Detection*
 
+**🏆 NeuraX Hackathon Project**
+</div>
+
+---
+
+## 🚀 Hackathon Info
+
+<div align="center">
+
+### 🎯 **NeuraX Hackathon Submission**
+
+**Team ID:** `NH12` | **Team Name:** `EliteX`
+
+*Developed during the NeuraX Hackathon - Innovating AI solutions for healthcare*
+
+</div>
+
+<div align="center">
+
 [Features](#-features) • [Quick Start](#-quick-start) • [Workflow](#-application-workflow) • [Documentation](#-documentation) • [Contributing](#-contributing)
 
 </div>
