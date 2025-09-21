@@ -266,10 +266,9 @@ include_timestamp = true
 ### Model Training
 ```bash
 # Train new model with custom dataset
-python src/train_model.py --data data/dataset/data.yaml --epochs 100
-
+python src/train_model.py 
 # Quick training for testing
-python src/quick_train.py --dataset custom_data
+python src/quick_train.py 
 ```
 
 ### Testing
